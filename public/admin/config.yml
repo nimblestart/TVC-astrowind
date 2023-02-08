@@ -19,3 +19,20 @@ collections: # A list of collections the CMS should be able to edit
       - { label: 'Author', name: 'author', widget: 'string' }
       - { label: 'Author Twitter Handle', name: 'authorTwitter', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+
+
+  fields:
+  - label: Title
+    name: title
+    widget: string
+    # same as 'i18n: translate'. Allows translation of the title field
+    i18n: true
+  - label: Date
+    name: date
+    widget: datetime
+    # The date field will be duplicated from the default locale.
+    i18n: duplicate
+  - label: Body
+    name: body
+    # The markdown field will be omitted from the translation.
+    widget: markdown
